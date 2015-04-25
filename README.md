@@ -87,4 +87,4 @@ This function works the same as `craft.cookies.get` but instead of using the PHP
 
 **Tested on**
 
-+ Craft 2.0 and below
++ Craft 2.0 and later
