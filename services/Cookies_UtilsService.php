@@ -27,17 +27,24 @@ class Cookies_UtilsService extends BaseApplicationComponent
 
     public function setSecure($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
     {
-		$expire = (int) $expire;
-		$cookie = new HttpCookie($name, '');
+    	if ($name == "")
+    	{
+    		craft()->request->deleteCookie($name);
+    	}
+    	else
+    	{
+			$expire = (int) $expire;
+			$cookie = new HttpCookie($name, '');
+		
+			$cookie->value = craft()->security->hashData(base64_encode(serialize($value)));
+			$cookie->expire = $expire;
+			$cookie->path = $path;
+			$cookie->domain = $domain;
+			$cookie->secure = $secure;
+			$cookie->httpOnly = $httponly;
 	
-		$cookie->value = craft()->security->hashData(base64_encode(serialize($value)));
-		$cookie->expire = $expire;
-		$cookie->path = $path;
-		$cookie->domain = $domain;
-		$cookie->secure = $secure;
-		$cookie->httpOnly = $httponly;
-
-		craft()->request->getCookies()->add($cookie->name, $cookie);
+			craft()->request->getCookies()->add($cookie->name, $cookie);
+		}
     } /* -- setSecure */
 
     public function getSecure($name = "")

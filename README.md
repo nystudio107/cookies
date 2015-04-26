@@ -133,14 +133,27 @@ This function works the same as `getCookie` but it uses `craft()->request->getCo
 
 All three of these methods accomplish the same thing:
 
-	{# Delete a cookie using by passing no VALUE to 'setCookie' function #}
+	{# Delete a cookie by passing no VALUE to 'setCookie' function #}
     {{ setCookie( NAME ) }}
     
-	{# Delete a cookie using by passing no VALUE to 'setCookie' filter #}
+	{# Delete a cookie by passing no VALUE to 'setCookie' filter #}
     {{ NAME | setCookie() }}
 
-	{# Delete a cookie using by passing no VALUE to 'set' variable #}
+	{# Delete a cookie by passing no VALUE to 'set' variable #}
     {% do craft.cookies.set( NAME ) %}
+
+###Deleting Secure cookies###
+
+All three of these methods accomplish the same thing:
+
+	{# Delete a cookie by passing no VALUE to 'setSecureCookie' function #}
+    {{ setSecureCookie( NAME ) }}
+    
+	{# Delete a cookie by passing no VALUE to 'setSecureCookie' filter #}
+    {{ NAME | setSecureCookie() }}
+
+	{# Delete a cookie by passing no VALUE to 'setSecure' variable #}
+    {% do craft.cookies.setSecure( NAME ) %}
 
 ## Changelog
 
