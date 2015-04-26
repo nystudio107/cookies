@@ -10,7 +10,7 @@ class CookiesPlugin extends BasePlugin
 
     function getVersion()
     {
-        return '1.0';
+        return '1.0.1';
     }
 
     function getDeveloper()
@@ -26,5 +26,12 @@ class CookiesPlugin extends BasePlugin
     public function hasCpSection()
     {
         return false;
+    }
+
+    public function addTwigExtension()
+    {
+        Craft::import('plugins.cookies.twigextensions.CookiesTwigExtension');
+
+        return new CookiesTwigExtension();
     }
 }

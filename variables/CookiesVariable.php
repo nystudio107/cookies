@@ -3,49 +3,29 @@ namespace Craft;
 
 class CookiesVariable
 {
+
 /* --------------------------------------------------------------------------------
-	Standard cookies
+	Variables
 -------------------------------------------------------------------------------- */
 
     function set($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
     {
-		$expire = (int) $expire;
-		setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
-		$_COOKIE[$name] = $value;
-     } /* -- set */
+		craft()->cookies_utils->set($name, $value, $expire, $path, $domain, $secure, $httponly);
+    } /* -- set */
 
-    function get($name = "")
+    function get($name)
     {
-		if(isset($_COOKIE[$name]))
-			return $_COOKIE[$name];
+		return craft()->cookies_utils->get($name);
     } /* -- get */
-
-/* --------------------------------------------------------------------------------
-	Security validated cookies
--------------------------------------------------------------------------------- */
 
     function setSecure($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
     {
-		$expire = (int) $expire;
-		$cookie = new HttpCookie($name, '');
-	
-		$cookie->value = craft()->security->hashData(base64_encode(serialize($value)));
-		$cookie->expire = $expire;
-		$cookie->path = $path;
-		$cookie->domain = $domain;
-		$cookie->secure = $secure;
-		$cookie->httpOnly = $httponly;
-
-		craft()->request->getCookies()->add($cookie->name, $cookie);
+		craft()->cookies_utils->setSecure($name, $value, $expire, $path, $domain, $secure, $httponly);
     } /* -- setSecure */
 
-    function getSecure($name = "")
+    function getSecure($name)
     {
-		$cookie = craft()->request->getCookie($name);
-		if ($cookie && !empty($cookie->value) && ($data = craft()->security->validateData($cookie->value)) !== false)
-		{
-			return @unserialize(base64_decode($data));
-		}
+		return craft()->cookies_utils->getSecure($name);
     } /* -- getSecure */
 
 }
