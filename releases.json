@@ -1,0 +1,29 @@
+[
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/khalwat/cookies/archive/master.zip",
+        "date": "2015-11-23T11:00:00-05:00",
+        "notes": [
+            "[Added] Added support for Craft 2.5 new plugin features",
+            "[Improved] Updated the README.md",
+        ]
+    },
+    {
+        "version": "1.0.1",
+        "downloadUrl": "https://github.com/khalwat/cookies/archive/master.zip",
+        "date": "2015-04-25T11:00:00-05:00",
+        "notes": [
+            "[Added] Added Twig filters and functions for setting/getting cookies",
+            "[Added] Moved the core functionality to services",
+            "[Improved] Updated the documentation",
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "downloadUrl": "https://github.com/khalwat/cookies/archive/master.zip",
+        "date": "2015-04-24T11:00:00-05:00",
+        "notes": [
+            "[Added] Initial release"
+        ]
+    }
+]

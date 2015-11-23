@@ -157,12 +157,17 @@ All three of these methods accomplish the same thing:
 
 ## Changelog
 
-### 1.0.1 -- 4/25/2015
+### 1.0.2 -- 2015.11.23
+
+* Added support for Craft 2.5 new plugin features
+* Updated the README.md
+
+### 1.0.1 -- 2015.04.25
 
 * Added Twig filters and functions for setting/getting cookies
 * Moved the core functionality to services
 * Updated the documentation
 
-### 1.0.0 -- 4/24/2015
+### 1.0.0 -- 2015.04.24
 
 * Initial release
