@@ -23,10 +23,10 @@ class CookiesPlugin extends BasePlugin
         return 'https://github.com/khalwat/cookies/blob/master/releases.json';
     }
     
-	public function getVersion()
-	{
-	    return '1.0.2';
-	}
+    public function getVersion()
+    {
+        return '1.0.2';
+    }
 
     public function getSchemaVersion()
     {
