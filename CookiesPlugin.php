@@ -35,12 +35,12 @@ class CookiesPlugin extends BasePlugin
 
     function getDeveloper()
     {
-        return 'Megalomaniac';
+        return 'nystudio107';
     }
 
     function getDeveloperUrl()
     {
-        return 'http://www.megalomaniac.com';
+        return 'http://nystudio107.com';
     }
 
     public function hasCpSection()

@@ -1,4 +1,4 @@
-### Cookies plugin for Craft CMS
+# Cookies plugin for Craft CMS
 
 A simple plugin for setting and getting cookies from within [Craft CMS](http://buildwithcraft.com) templates.
 
@@ -10,7 +10,7 @@ This plugin is inspired the [Lj_cookies](https://github.com/lewisjenkins/craft-l
 2.  -OR- do a `git clone https://github.com/khalwat/cookies.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 3. Install plugin in the Craft Control Panel under Settings > Plugins
 
-###Setting cookies###
+## Setting cookies
 
 All three of these methods accomplish the same thing:
 
@@ -40,7 +40,7 @@ All of the parameters except for `NAME` are optional.
     {% do craft.cookies.set('marvin', 'martian', '', '/foo/' ) %}
     {# Cookie available within /foo/ directory and sub-directories. #}
 
-###Setting Secure cookies###
+## Setting Secure cookies
 
 All three of these methods accomplish the same thing:
 
@@ -68,7 +68,7 @@ All of the parameters except for `NAME` are optional.
     {% do craft.cookies.setSecure('marvin', 'martian', '', '/foo/' ) %}
     {# Cookie available within /foo/ directory and sub-directories. #}
 
-###Retrieving cookies###
+## Retrieving cookies
 
 Both of these methods accomplish the same thing:
 
@@ -91,7 +91,7 @@ Both of these methods accomplish the same thing:
 		{{ myCookie }}
 	{% endif %}
 
-###Retrieving Secure cookies###
+## Retrieving Secure cookies
 
 Both of these methods accomplish the same thing:
 
@@ -129,7 +129,7 @@ This function works the same as `getCookie` but it uses `craft()->request->getCo
 		{{ myCookie }}
 	{% endif %}
 	
-###Deleting cookies###
+## Deleting cookies
 
 All three of these methods accomplish the same thing:
 
@@ -142,7 +142,7 @@ All three of these methods accomplish the same thing:
 	{# Delete a cookie by passing no VALUE to 'set' variable #}
     {% do craft.cookies.set( NAME ) %}
 
-###Deleting Secure cookies###
+## Deleting Secure cookies
 
 All three of these methods accomplish the same thing:
 
