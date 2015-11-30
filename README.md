@@ -6,7 +6,7 @@ This plugin is inspired the [Lj_cookies](https://github.com/lewisjenkins/craft-l
 
 **Installation**
 
-1. Unzip file and place `cookies` directory into your `craft/plugins` directory
+1. Download & unzip the file and place the `cookies` directory into your `craft/plugins` directory
 2.  -OR- do a `git clone https://github.com/khalwat/cookies.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 3. Install plugin in the Craft Control Panel under Settings > Plugins
 
