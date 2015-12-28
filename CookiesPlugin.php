@@ -20,7 +20,7 @@ class CookiesPlugin extends BasePlugin
     
     public function getReleaseFeedUrl()
     {
-        return 'https://github.com/khalwat/cookies/blob/master/releases.json';
+        return 'https://raw.githubusercontent.com/khalwat/cookies/master/releases.json';
     }
     
     public function getVersion()
