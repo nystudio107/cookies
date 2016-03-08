@@ -28,7 +28,7 @@ They all act as a wrapper for the PHP `setcookie` function:
 
 More info: (http://php.net/manual/en/function.setcookie.php)
 
-All of the parameters except for `NAME` are optional.
+All of the parameters except for `NAME` are optional.  The `DOMAIN` defaults to `/`
 
 **Examples**
 

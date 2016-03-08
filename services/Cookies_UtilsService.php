@@ -8,7 +8,7 @@ class Cookies_UtilsService extends BaseApplicationComponent
     Standard cookies
 -------------------------------------------------------------------------------- */
 
-    public function set($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
+    public function set($name = "", $value = "", $expire = 0, $path = "", $domain = "/", $secure = false, $httponly = false)
     {
         $expire = (int) $expire;
 /* -- Make sure the cookie expiry is in the past if we're deleting the cookie */
@@ -28,7 +28,7 @@ class Cookies_UtilsService extends BaseApplicationComponent
     Security validated cookies
 -------------------------------------------------------------------------------- */
 
-    public function setSecure($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
+    public function setSecure($name = "", $value = "", $expire = 0, $path = "", $domain = "/", $secure = false, $httponly = false)
     {
         if ($name == "")
         {
