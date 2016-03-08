@@ -12,20 +12,20 @@ class CookiesPlugin extends BasePlugin
     {
         return 'A simple plugin for setting and getting cookies from within Craft CMS templates.';
     }
-    
+
     public function getDocumentationUrl()
     {
         return 'https://github.com/khalwat/cookies/blob/master/README.md';
     }
-    
+
     public function getReleaseFeedUrl()
     {
         return 'https://raw.githubusercontent.com/khalwat/cookies/master/releases.json';
     }
-    
+
     public function getVersion()
     {
-        return '1.0.2';
+        return '1.0.3';
     }
 
     public function getSchemaVersion()

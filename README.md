@@ -158,6 +158,11 @@ All three of these methods accomplish the same thing:
 
 ## Changelog
 
+### 1.0.3 -- 2016.03.08
+
+* [Fixed] We now set the expiration date to the past if we're deleting a cookie, to force browsers to remove it
+* [Improved] Updated the README.md
+
 ### 1.0.2 -- 2015.11.23
 
 * Added support for Craft 2.5 new plugin features
