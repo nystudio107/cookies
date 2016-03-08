@@ -12,7 +12,7 @@ class Cookies_UtilsService extends BaseApplicationComponent
     {
         $expire = (int) $expire;
 /* -- Make sure the cookie expiry is in the past if we're deleting the cookie */
-        if (value=="")
+        if ($value=="")
             $expire = (int)(time() - 3600);
         setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
         $_COOKIE[$name] = $value;
@@ -38,7 +38,7 @@ class Cookies_UtilsService extends BaseApplicationComponent
         {
             $expire = (int) $expire;
 /* -- Make sure the cookie expiry is in the past if we're deleting the cookie */
-            if (value=="")
+            if ($value=="")
                 $expire = (int)(time() - 3600);
             $cookie = new HttpCookie($name, '');
 
