@@ -28,7 +28,7 @@ They all act as a wrapper for the PHP `setcookie` function:
 
 More info: (http://php.net/manual/en/function.setcookie.php)
 
-All of the parameters except for `NAME` are optional.  The `DOMAIN` defaults to `/`
+All of the parameters except for `NAME` are optional.  The `PATH` defaults to `/` if not specified
 
 **Examples**
 
@@ -56,7 +56,7 @@ All three of these methods accomplish the same thing:
 
 This function works the same as `setCookie` but instead of using the PHP `setcookie` function, it uses the `craft()->request->getCookies()->add` to add the cookies via Craft.  It also utilizes `craft->security` framework to encrypt and validate the cookie contents between requests.
 
-All of the parameters except for `NAME` are optional.
+All of the parameters except for `NAME` are optional.  The `PATH` defaults to `/` if not specified
 
 **Examples**
 
@@ -157,6 +157,11 @@ All three of these methods accomplish the same thing:
     {% do craft.cookies.setSecure( NAME ) %}
 
 ## Changelog
+
+### 1.0.4 -- 2016.04.06
+
+* [Fixed] Saner default values for cookies
+* [Improved] Updated the README.md
 
 ### 1.0.3 -- 2016.03.08
 

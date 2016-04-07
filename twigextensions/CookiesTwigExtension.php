@@ -44,7 +44,7 @@ class CookiesTwigExtension extends \Twig_Extension
 	Filters
 -------------------------------------------------------------------------------- */
 
-    public function setCookie_filter($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
+    public function setCookie_filter($name = "", $value = "", $expire = 0, $path = "/", $domain = "", $secure = false, $httponly = false)
     {
 		craft()->cookies_utils->set($name, $value, $expire, $path, $domain, $secure, $httponly);
     } /* -- setCookie_filter */
@@ -54,7 +54,7 @@ class CookiesTwigExtension extends \Twig_Extension
 		return craft()->cookies_utils->get($name);
     } /* -- getCookie_filter */
 
-    public function setSecureCookie_filter($name = "", $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false)
+    public function setSecureCookie_filter($name = "", $value = "", $expire = 0, $path = "/", $domain = "", $secure = false, $httponly = false)
     {
 		craft()->cookies_utils->setSecure($name, $value, $expire, $path, $domain, $secure, $httponly);
     } /* -- setSecureCookie_filter */
