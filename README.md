@@ -2,6 +2,8 @@
 
 A simple plugin for setting and getting cookies from within [Craft CMS](http://buildwithcraft.com) templates.
 
+Related: [Cookies for Craft 3.x](https://github.com/nystudio107/craft3-cookies)
+
 This plugin is inspired the [Lj_cookies](https://github.com/lewisjenkins/craft-lj-cookies) plugin, and functions similarly, but adds the ability to get and set secure cookies using the craft->security() framework, and it also provides Twig filters and functions as well as Craft variables for setting & getting cookies.
 
 **Installation**
