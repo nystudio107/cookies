@@ -1,3 +1,11 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+# DEPRECATED
+
+This Craft CMS 2.x plugin is no longer supported, but it is fully functional, and you may continue to use it as you see fit. The license also allows you to fork it and make changes as needed for legacy support reasons.
+
+The Craft CMS 3.x version of this plugin can be found here: [craft-cookies](https://github.com/nystudio107/craft-cookies) and can also be installed via the Craft Plugin Store in the Craft CP.
+
 # Cookies plugin for Craft CMS
 
 A simple plugin for setting and getting cookies from within [Craft CMS](http://buildwithcraft.com) templates.
